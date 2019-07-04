@@ -4,12 +4,17 @@
 
 #include <iostream>
 #include <string>
-#include "player.h"
+#include "character.h"
 
 using namespace std;
 
+void WarriorQuest(Warrior warrior);
+void MageQuest(Mage mage);
+
 int main() {
     int charSelection;
+    Warrior warrior;
+    Mage mage;
     
     cout << "Welcome to Terminalslayer. Please select your character: " << endl;
     cout << "1. Warrior" << endl;
@@ -21,20 +26,25 @@ int main() {
     
     cout << "You have choosen the ";
     
-    switch (charSelection) {
-        case 1:
-            cout << "Warrior" << endl;
-            break;
-        case 2:
-            cout << "Mage" << endl;
-            break;
-        case 3:
-            cout << "Priest" << endl;
-            break;
-        case 4:
-            cout << "Rogue" << endl;
-            break;
-        default:
-            break;
+    if (charSelection == 1) {
+        cout << "Warrior" << endl;
+        cout << "What is your warrior name?" << endl;
+        cin >> warrior.name;
+        WarriorQuest(warrior);
+    } else if (charSelection == 2) {
+        cout << "Mage" << endl;
+        cout << "What is your mage name?" << endl;
+        cin >> mage.name;
+        MageQuest(mage);
     }
+}
+
+void WarriorQuest(Warrior warrior) {
+    cout << "Welcome " << warrior.name << endl;
+    cout << "The king requests your presence immidiatelly!";
+}
+
+void MageQuest(Mage mage) {
+    cout << "Welcome " << mage.name << endl;
+    cout << "The counsel of magic has summoned you!";
 }
