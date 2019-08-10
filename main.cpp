@@ -23,64 +23,37 @@ int main() {
     int diceChoice;
     
     
-//    cout << "Welcome to Terminalslayer. Please select your character: " << endl;
-//    cout << "1. Warrior" << endl;
-//    cout << "2. Mage" << endl;
-//    cout << "3. Priest" << endl;
-//    cout << "4. Rogue" << endl;
-//
-//    cin >> charSelection;
-//
-//    cout << "You have choosen the ";
-//
-//    if (charSelection == 1) {
-//        cout << "Warrior" << endl;
-//        cout << "What is your name warrior?" << endl;
-//        cin >> warrior.name;
-//        WarriorQuest(warrior);
-//    } else if (charSelection == 2) {
-//        cout << "Mage" << endl;
-//        cout << "What is your name mage?" << endl;
-//        cin >> mage.name;
-//        MageQuest(mage);
-//    } else if (charSelection == 3) {
-//        cout << "Priest" << endl;
-//        cout << "What is your name priest?" << endl;
-//        cin >> priest.name;
-//    } else if (charSelection == 4) {
-//        cout << "Rogue" << endl;
-//        cout << "What is your name rogue?" << endl;
-//        cin >> rogue.name;
-//    }
+    cout << "Welcome to Terminalslayer. Please select your character: " << endl;
+    cout << "1. Warrior" << endl;
+    cout << "2. Mage" << endl;
+    cout << "3. Priest" << endl;
+    cout << "4. Rogue" << endl;
+
+    cin >> charSelection;
+
+    cout << "You have choosen the ";
+
+    if (charSelection == 1) {
+        cout << "Warrior" << endl;
+        cout << "What is your name warrior?" << endl;
+        cin >> warrior.name;
+        WarriorQuest(warrior);
+    } else if (charSelection == 2) {
+        cout << "Mage" << endl;
+        cout << "What is your name mage?" << endl;
+        cin >> mage.name;
+        MageQuest(mage);
+    } else if (charSelection == 3) {
+        cout << "Priest" << endl;
+        cout << "What is your name priest?" << endl;
+        cin >> priest.name;
+    } else if (charSelection == 4) {
+        cout << "Rogue" << endl;
+        cout << "What is your name rogue?" << endl;
+        cin >> rogue.name;
+    }
     
     // Part 1 - Looking for magical weapon
-    
-    cout << "Roll a D20" << endl;
-    
-    cout << "1. D6" << endl;
-    cout << "2. D8" << endl;
-    cout << "3. D20" << endl;
-    
-    int i = 0;
-//    while (i++ < 10) {
-//        cin >> diceChoice;
-//        //diceChoice = 3;
-//        cout << "You Rolled: " << DiceRoll(diceChoice) << endl;
-//    }
-    
-    DiceRoll(3);
-    cout << endl;
-    
-    srand((int)time(0));
-    int j = 0;
-    while(j++ < 10) {
-        int r = (rand() % 20) + 1;
-        cout << r << " ";
-    }
-    return 0;
-    
-    
-    
     
     // Part 2 - Seek out the enchantress
     

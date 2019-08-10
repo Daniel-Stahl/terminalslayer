@@ -1,9 +1,22 @@
+//BagOfDice diceRolls;
+
 struct Warrior {
     std::string name;
     int strength = 10;
     int dexterity = 6;
     int wisdom = 4;
     int spirit = 4;
+    
+    int AxeSlash(int dice) {
+        int damage;
+        int axeDmg = 5;
+        
+        if (dice == 1) {
+            
+        }
+        
+        return damage;
+    }
 };
 
 struct Mage {

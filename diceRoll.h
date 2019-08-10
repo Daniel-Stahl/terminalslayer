@@ -5,24 +5,25 @@
 
 using namespace std;
 
-void DiceRoll(int dice) {
-//    srand((int)time(0));
-//    int result = 0;
-//
-//    if (dice == 3) {
-//        int r = (rand() % 20) +1;
-//        result = r;
-//    }
-    
-    srand((int)time(0));
-    int j = 0;
-    while(j++ < 10) {
-        int r = (rand() % 20) + 1;
-        cout << r << " ";
-        sleep(1);
+class BagOfDice {
+
+public:
+    int DiceRoll(int dice) {
+        srand((int)time(0));
+        int result = 0;
+
+        if (dice == 1) {
+            int d6 = (rand() % 6) +1;
+            result = d6;
+        }
+        
+        if (dice == 3) {
+            int r = (rand() % 20) +1;
+            result = r;
+        }
+        
+        return result;
     }
-    
-//    return result;
-}
+};
 
 
