@@ -6,9 +6,9 @@
 
 using namespace std;
 
-struct BagOfDice {
+struct Dice {
 
-    int DiceRoll(int dice) {
+    int Roll(int dice) {
         srand((int)time(0));
         int result = 0;
         
@@ -29,16 +29,6 @@ struct BagOfDice {
             
             result = (rand() % dice) +1;
         }
-        
-//        if (dice == 1) {
-//            int d6 = (rand() % 6) +1;
-//            result = d6;
-//        }
-//
-//        if (dice == 3) {
-//            int r = (rand() % 20) +1;
-//            result = r;
-//        }
         
         return result;
     }

@@ -1,11 +1,11 @@
 // Terminalslayer
 // RPG terminal game
-//Made by Daniel Stahl
+// Made by Daniel Stahl
 
 #include <iostream>
 #include <string>
-#include "character.h"
-#include "diceRoll.h"
+#include "Character.h"
+#include "Dice.h"
 #include <cstdlib>
 #include <ctime>
 
@@ -15,9 +15,13 @@ void WelcomeNewPlayer();
 
 int main() {
     int diceChoice;
-    BagOfDice dice;
+    Dice dice;
+    Character character;
     
-    WelcomeNewPlayer();
+    //WelcomeNewPlayer();
+    
+    character.CreateCharacter();
+    character.Print();
     
     // Part 1 - Village encounter
     
