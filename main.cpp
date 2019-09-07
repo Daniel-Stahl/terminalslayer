@@ -4,36 +4,39 @@
 
 #include <iostream>
 #include <string>
-#include "Character.h"
-#include "Dice.h"
-#include <cstdlib>
-#include <ctime>
+#include "Slayer.h"
 
 using namespace std;
 
-void WelcomeNewPlayer();
-
 int main() {
-    int diceChoice;
-    Dice dice;
-    Character character;
+    // Create Class
+    Slayer slayer;
+    int playersChoice;
     
-    //WelcomeNewPlayer();
+    cout << "Welcome to Terminal Slayer!" << endl
+         << "Choose a Class:" << endl
+         << "1: Barbarian" << endl
+         << "2: Rogue" << endl
+         << "3: Mage" << endl;
     
-    character.CreateCharacter();
-    character.Print();
+    cin >> playersChoice;
     
-    // Part 1 - Village encounter
+    if (playersChoice == 1) {
+        slayer.CreateSlayer(200, 40);
+    } else if (playersChoice == 2) {
+        slayer.CreateSlayer(160, 45);
+    } else if (playersChoice == 3) {
+        slayer.CreateSlayer(150, 50);
+    }
+//
+//    do {
+//        int choiceA;
+//        int
+//    } while (<#condition#>);
     
-    // Part 2 - Seek out the enchantress
+    cout << "Player selected: " << slayer.HP << endl;
+    cout << "Player swings: " << slayer.AttackOne() << endl;
+    cout << "Player swings: " << slayer.AttackTwo() << endl;
     
-    // Part 3 - Find Skeleton Lord
     
-    // Part 4 - Travel to the King
-    
-    // Part 5 - Battle the Necromancer
-}
-
-void WelcomeNewPlayer() {
-    cout << "Welcome to Terminal Slayer. Lets begin with building your character" << endl;
 }
