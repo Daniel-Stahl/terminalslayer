@@ -28,15 +28,33 @@ int main() {
     } else if (playersChoice == 3) {
         slayer.CreateSlayer(150, 50);
     }
-//
-//    do {
-//        int choiceA;
-//        int
-//    } while (<#condition#>);
+    
+    cout << "We found an opponent." << endl;
+
+ //Select Fight, Rest, or Exit
+    do {
+        int menu;
+        
+        cout << "Choose wisely:" << endl;
+        cout << "1: Fight" << endl
+             << "2: Rest" << endl
+             << "3: Leave the arena" << endl;
+        
+        cin >> menu;
+        
+        if (menu == 1) {
+            cout << "Fight" << endl;
+        } else if(menu == 2) {
+            cout << "Rest" << endl;
+        }
+        
+        
+    
+    } while (menu != 3);
     
     cout << "Player selected: " << slayer.HP << endl;
-    cout << "Player swings: " << slayer.AttackOne() << endl;
-    cout << "Player swings: " << slayer.AttackTwo() << endl;
-    
+    cout << "Foe swings: " << slayer.AttackOne() << "Player HP is: " << slayer.HP - slayer.AttackOne() << endl;
+    slayer.HP = slayer.HP - slayer.AttackOne();
+    cout << "Player HP is: " << slayer.HP << endl;
     
 }
